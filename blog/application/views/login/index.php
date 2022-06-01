@@ -18,7 +18,7 @@
   <div class="form-group row">
     <label for="Password" class="col-4 col-form-label">Password</label> 
     <div class="col-8">
-      <input id="password" name="password" placeholder="Masukkan Password Anda" type="text" class="form-control">
+      <input id="password" name="password" placeholder="Masukkan Password Anda" type="password" class="form-control">
     </div>
   </div> 
   <div class="form-group row">

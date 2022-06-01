@@ -18,9 +18,16 @@ class Login extends CI_Controller{
             redirect('/mahasiswa');
             redirect('/dosen');
             redirect('/matakuliah');
-        } else {
-            redirect('/login');
-        }
+            }elseif ($username == 'mahasiswa' && $password =='mahasiswa'){
+                $userdata = [
+                "username" => $username,
+            ];
+            $this->session->set_userdata($userdata);
+            redirect('/matakuliah');
+            }
+            else {
+                redirect('/login');
+            }
         
     }
     public function logout(){
