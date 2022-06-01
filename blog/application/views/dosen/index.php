@@ -30,7 +30,14 @@
                 <td><?php echo $dsn -> nidn ?></td>
                 <td><?php echo $dsn -> pendidikan ?></td>
                 <td>
-                    <a href="<?php echo base_url("index.php/dosen/detail/$dsn->id") ?>">Detail</a>
+                <a href="<?php echo base_url("index.php/dosen/detail/$dsn->id") ?>" 
+                class="btn btn-info btn-lg active" role="button" aria-pressed="true">Detail</a>
+                &nbsp;
+                <a href= <?php echo base_url("index.php/dosen/edit/$dsn->id") ?> 
+                class="btn btn-success btn-lg active" role="button" aria-pressed="true">Edit</a>
+                &nbsp;
+                <a href= <?php echo base_url("index.php/dosen/delete/$dsn->id") ?> class="btn btn-danger btn-lg active" role="button" aria-pressed="true" 
+                onclick=" return hapusDosen('Anda Yakin ingin menghapus dosen yang bernama <?php echo $dsn->nama ?>?')">Hapus</a>
                 </td>
             </tr>
             <?php
@@ -39,6 +46,7 @@
             ?>
         </tbody>
     </table>
+    <a href="<?=base_url()?>index.php/dosen/form" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Tambah</a>
     </div>
     
 </body>
